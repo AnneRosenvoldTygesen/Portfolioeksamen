@@ -1,0 +1,384 @@
+/* ================================================
+  PORTFOLIO EKSAMEN - GENERELLE STYLES
+   ------------------------------------------------
+   Indhold:
+   1. Variabler & grundindstillinger
+   2. Typografi
+   3. Header
+   4. Navigation
+   5. Main & sektioner
+   6. Footer
+   7. Responsivt (mobil → tablet → desktop)
+   ================================================ */
+
+/* ------------------------------------------------
+   1. VARIABLER & GRUNDINDSTILLINGER
+   Alle farver og fonte samlet ét sted —
+   ændr her, og det opdateres overalt
+   ------------------------------------------------ */
+/* mobil først */
+:root {
+  /* Farver */
+  --color-brun: #be7a53;
+  --color-blaa: #aec2cc;
+  --color-groen: #00976e;
+  --color-lilla: #c091c5;
+  --color-gul: #e4ff22;
+  --color-graa: #e5e3d6;
+  --color-offwhite: #f8f9eb;
+  --color-sort: #020200;
+
+  /* Fonte */
+  --font-header: "Poppins", sans-serif;
+  --font-subheader: "Josefin Sans", sans-serif;
+  --font-body: "Noto Sans", sans-serif;
+
+  /* Typografi - mobil */
+  --fs-h1: 5.5rem;
+  --fs-h2: 3rem;
+  --fs-h3: 2rem;
+  --fs-h4: 1.2rem;
+
+  --fs-project-number: 5rem;
+  --fs-nav: 1.2rem;
+  --fs-body: 1rem;
+}
+
+/* Tablet */
+/* @media (min-width: 768px) {
+  :root {
+    --fs-h1: 8rem;
+    --fs-h2: 4rem;
+    --fs-h3: 3rem;
+    --fs-h4: 2rem;
+
+    --fs-project-number: 8rem;
+    --fs-nav: 2rem;
+  }
+} */
+
+/* Desktop */
+@media (min-width: 1200px) {
+  :root {
+    --fs-h1: 16rem;
+    --fs-h2: 7.5rem;
+    --fs-h3: 5.625rem;
+    --fs-h4: 3.5rem;
+
+    --fs-project-number: 16rem;
+    --fs-nav: 2rem;
+    --fs-body: 1.25rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ------------------------------------------------
+   2. TYPOGRAFI
+   ------------------------------------------------ */
+
+body {
+  background-color: var(--color-graa);
+  color: var(--color-sort);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: var(--font-header);
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: var(--font-header);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: var(--font-subheader);
+  font-size: var(--fs-h3);
+  font-weight: 500;
+}
+
+h4 {
+  font-family: var(--font-header);
+  font-size: var(--fs-h4);
+  font-weight: 500;
+}
+/*** NUMMER TIL HVER OVERSKRIFT I PROJEKT **/
+
+.project-number {
+  font-family: var(--font-header);
+  font-weight: 700;
+  -webkit-text-stroke: 2px var(--color-sort);
+  color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav a {
+  font-family: var(--font-subheader);
+  font-size: var(--fs-nav);
+  font-weight: 400;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1;
+}
+
+/* ------------------------------------------------
+   3. HEADER
+   Toppen af siden med h1 og andet tekst samt
+   menuen på desktop (husk menu på mobil)
+   ------------------------------------------------ */
+
+/* MOBILE */
+
+h1 {
+  text-align: center;
+  margin-bottom: 0.2rem;
+  line-height: 0.7;
+  margin-top: 0.5rem;
+}
+
+.header_title:hover {
+  color: var(--color-gul);
+}
+.hero-info h4 {
+  margin: 0;
+}
+
+.dot {
+  font-size: 1.5rem;
+}
+
+/* hover-effekt på logoet i headeren */
+.header_logo img {
+  width: 60px;
+  transition: 0.3s ease;
+  margin-left: 1rem;
+}
+
+.header_logo:hover img {
+  content: url("../img/header_footer/art_logo_gul.webp");
+  transform: rotate(-5deg);
+}
+
+/*** drop-down på projekter i menu i mobil **/
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.dropdown_content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: var(--color-graa);
+  padding: 1rem;
+  border-radius: 10px;
+
+  min-width: 220px;
+
+  flex-direction: column;
+  gap: 0.5rem;
+
+  z-index: 1000;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dropdown_content a {
+  white-space: nowrap;
+}
+
+.dropdown_content.show {
+  display: flex;
+  /* width: 150px; */
+}
+
+.dropdown:hover .dropdown_content {
+  display: flex;
+}
+
+.dropdown_content a:hover {
+  color: var(--color-gul);
+}
+/* teksten i menupunkterne */
+.hero-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  /* outline: 1px solid red; */
+}
+
+/* logo og menupunkter i headeren */
+
+.header_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.header_nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* margin-top: 2.5rem; */
+}
+
+.nav_prjkt {
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.nav_prjkt:hover {
+  color: var(--color-gul);
+}
+
+/* Aktiv side */
+.nav_prjkt.active {
+  background-color: var(--color-gul);
+  color: var(--color-sort);
+}
+
+/* Stregen der afgrænser header */
+.header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding-bottom: 1rem;
+}
+
+/**** FOOTER MOBILE ****/
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+  padding-top: 1rem;
+}
+
+.footer_info {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+.footer_tekst {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footer_kontakt {
+  text-align: center;
+}
+
+.footer_socialemedier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ikoner {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.linkedin_ikon img,
+.instagram_ikon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.linkedin_ikon:hover img {
+  content: url("../img/header_footer/linkedin_icon_gul.webp");
+}
+
+.instagram_ikon:hover img {
+  content: url("../img/header_footer/instagram_icon_gul.webp");
+}
+/**** DESKTOP ****/
+
+/* header desktop **/
+
+@media (min-width: 768px) {
+  .header {
+    align-items: stretch;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .hero-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .dot {
+    font-size: 3rem;
+  }
+
+  .header_logo img {
+    width: 90px;
+  }
+
+  .nav_prjkt:hover {
+    color: var(--color-gul);
+  }
+
+  /** footer desktop **/
+  .footer_tekst,
+  .footer_følgmed {
+    font-size: 1.5rem;
+  }
+}
