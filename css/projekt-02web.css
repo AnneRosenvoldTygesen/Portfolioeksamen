@@ -1,0 +1,178 @@
+/* ================================================
+   PORTFOLIOEKSAMEN — Projekt 02 Web.css
+   ------------------------------------------------
+   Indhold:
+   Sektion 1. Projekt 02 Web mobile opsætning
+   Sektion 2. Responsivt (desktop)
+   ================================================ */
+
+/* ------------------------------------------------
+   1. SEKTION 1 - Projekt 02 Web mobile opsætning
+   ------------------------------------------------ */
+/*** Overskrift **/
+.web_header {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/**** styling af fullwidth top del **/
+.fullwidth_02top {
+  min-height: 150px;
+  width: 100%;
+  background-color: var(--color-gul);
+  margin-block: 20px;
+  text-align: center;
+}
+
+.fullwidth_h2 {
+  text-align: center;
+  font-family: var(--font-header);
+  font-size: 8.2rem;
+  font-weight: 700;
+  -webkit-text-stroke: 1px var(--color-sort);
+  color: transparent;
+}
+
+/**** styling af screen img og link ***/
+.section3_web {
+  padding-top: 50px;
+  padding-bottom: 90px;
+}
+
+.device_mockup02 {
+  position: relative;
+  margin-inline: auto;
+}
+
+.desktop02 {
+  /* display: block; */
+  position: relative;
+  width: 70%;
+  max-width: 600px;
+  margin-inline: auto;
+  margin-left: 20%;
+}
+
+.mobile02 {
+  position: absolute;
+  width: 25%;
+
+  left: 10%;
+  bottom: 0cap;
+
+  transform: rotate(-15deg);
+}
+
+.knap_wrapper {
+  text-align: center;
+}
+.knap {
+  font-family: var(--font-subheader);
+  font-size: var(--fs-nav);
+  font-weight: 400;
+  display: inline-block;
+
+  padding: 0.5rem 1.5rem;
+
+  background-color: var(--color-gul);
+  color: var(--color-sort);
+
+  border-radius: 25px;
+
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+
+  transition: all 0.3s ease;
+}
+
+.knap:hover {
+  background-color: var(--color-gul);
+}
+
+/**** Løsnings afsnit ***/
+.web_loesning {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.web_loesning h3 {
+  font-size: 2.5rem;
+}
+
+.web_loesning p {
+  max-width: 40ch;
+  margin-inline: auto;
+  margin-top: 20px;
+}
+
+/**** Fullwidth grid placering ****/
+.fullwidth_grid_web {
+  background-color: var(--color-brun);
+  display: grid;
+  gap: 2rem;
+  padding-inline: 30px;
+  padding-block: 70px;
+  margin-bottom: 80px;
+}
+
+/**** Proces afsnit **/
+.web_proces {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.web_proces h3 {
+  font-size: 2.5rem;
+}
+
+.web_proces p {
+  max-width: 40ch;
+  margin-inline: auto;
+  margin-top: 20px;
+}
+
+/**** Reflektion afsnit **/
+.web_reflektion {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.web_reflektion h3 {
+  font-size: 2.5rem;
+  margin-top: 60px;
+}
+
+.web_reflektion p {
+  max-width: 40ch;
+  margin-inline: auto;
+  margin-top: 20px;
+}
+
+/*** Links til andre projekt sider ***/
+
+.web_links {
+  display: grid;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.web_links a {
+  font-family: var(--font-subheader);
+  font-size: var(--fs-nav);
+  font-weight: 400;
+  display: inline-block;
+
+  padding: 0.5rem 1.5rem;
+
+  background-color: var(--color-gul);
+  color: var(--color-sort);
+
+  border-radius: 25px;
+
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+
+  transition: all 0.3s ease;
+  text-align: center;
+}
