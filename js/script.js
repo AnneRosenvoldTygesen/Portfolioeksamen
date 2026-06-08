@@ -1,17 +1,12 @@
 const scrollHint = document.querySelector(".scroll_hint");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 200) {
+  const scrollPosition = window.innerHeight + window.scrollY;
+  const pageHeight = document.documentElement.scrollHeight;
+
+  if (scrollPosition >= pageHeight - 150) {
     scrollHint.style.opacity = "0";
   } else {
     scrollHint.style.opacity = "1";
   }
 });
-
-// const dropdownBtn = document.querySelector(".dropdown_btn");
-// const dropdownMenu = document.querySelector(".dropdown_content");
-
-// dropdownBtn.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   dropdownMenu.classList.toggle("show");
-// });

@@ -18,6 +18,12 @@
   margin-block: 75px;
 }
 
+.forside_grid img {
+  max-width: 80%;
+  display: block;
+  margin-inline: auto;
+}
+
 .kort {
   height: 500px;
 
@@ -48,7 +54,13 @@
   font-family: var(--font-subheader);
   font-size: var(--fs-h3);
   font-weight: 500;
+  transition: all 0.3s ease;
 }
+/**bevægelsen ved hover effekt på forsiden **/
+.kort a:hover {
+  transform: scale(1.2);
+}
+
 .kort.introtekst {
   background-color: var(--color-brun);
   color: var(--color-sort);
@@ -62,12 +74,6 @@
   max-width: 35ch;
   margin-inline: auto;
   font-size: 1.2rem;
-}
-
-.forside_grid img {
-  max-width: 80%;
-  display: block;
-  margin-inline: auto;
 }
 
 /*** Hvert kort **/
