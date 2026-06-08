@@ -7,8 +7,9 @@
    ================================================ */
 
 /* ------------------------------------------------
-   1. SEKTION 1 - Projekt 02 Web mobile opsætning
+   SEKTION 1 - Projekt 02 Web mobile opsætning
    ------------------------------------------------ */
+
 /*** Overskrift **/
 .web_header {
   text-align: center;
@@ -46,7 +47,6 @@
 }
 
 .desktop02 {
-  /* display: block; */
   position: relative;
   width: 70%;
   max-width: 600px;
@@ -148,31 +148,140 @@
   margin-top: 20px;
 }
 
-/*** Links til andre projekt sider ***/
+/*** Links til de andre projekter ***/
 
 .web_links {
   display: grid;
-  gap: 5px;
+  gap: 0.5rem;
   justify-content: center;
+
   margin-top: 60px;
   margin-bottom: 60px;
 }
 
 .web_links a {
-  font-family: var(--font-subheader);
-  font-size: var(--fs-nav);
-  font-weight: 400;
-  display: inline-block;
+  display: block;
 
   padding: 0.5rem 1.5rem;
 
   background-color: var(--color-gul);
   color: var(--color-sort);
 
-  border-radius: 25px;
+  border-radius: 15px;
 
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  font-family: var(--font-subheader);
+  font-size: var(--fs-nav);
+  font-weight: 400;
 
-  transition: all 0.3s ease;
   text-align: center;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.3s ease;
+}
+
+.web_links a:hover {
+  transform: translateY(-2px);
+}
+
+.web_proces,
+.web_reflektion {
+  justify-self: center;
+}
+
+/* ------------------------------------------------
+   SEKTION 2 - Responsivt (desktop)
+   ------------------------------------------------ */
+@media (min-width: 768px) {
+  /*** Overskrift **/
+  .web_header {
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .section_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .web_loesning {
+    max-width: 40ch;
+    margin-inline: auto;
+    text-align: left;
+    padding-top: 15%;
+  }
+
+  .fullwidth_grid_web {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 10px;
+  }
+
+  .layout_web {
+    padding-top: 200px;
+  }
+
+  .galleri_web {
+    padding-top: 150px;
+  }
+
+  .section_text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+
+    max-width: 1300px;
+    margin-inline: auto;
+
+    align-items: start;
+  }
+
+  .section_text p {
+    max-width: 40ch;
+  }
+
+  .web_proces,
+  .web_reflektion {
+    max-width: 100ch;
+    margin-inline: auto;
+    text-align: left;
+    padding-top: 15%;
+  }
+
+  .web_proces h3,
+  .web_reflektion h3 {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  /*** styling af de 4 links i bunden **/
+
+  .web_links {
+    grid-template-columns: repeat(2, max-content);
+    gap: 1rem 1.5rem;
+    /* margin-top: 60px; */
+    margin-bottom: 120px;
+  }
+
+  .web_links a {
+    padding: 0.5rem 1.5rem;
+
+    background-color: var(--color-gul);
+    color: var(--color-sort);
+
+    border-radius: 30px;
+
+    font-family: var(--font-subheader);
+    font-size: var(--fs-nav);
+    font-weight: 400;
+
+    text-align: center;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+    transition: transform 0.3s ease;
+  }
 }

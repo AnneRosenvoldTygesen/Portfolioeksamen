@@ -44,29 +44,16 @@
   --fs-body: 1rem;
 }
 
-/* Tablet */
-/* @media (min-width: 768px) {
-  :root {
-    --fs-h1: 8rem;
-    --fs-h2: 4rem;
-    --fs-h3: 3rem;
-    --fs-h4: 2rem;
-
-    --fs-project-number: 8rem;
-    --fs-nav: 2rem;
-  }
-} */
-
 /* Desktop */
 @media (min-width: 1200px) {
   :root {
     --fs-h1: 16rem;
-    --fs-h2: 7.5rem;
-    --fs-h3: 5.625rem;
+    --fs-h2: 5rem;
+    --fs-h3: 4rem;
     --fs-h4: 3.5rem;
 
     --fs-project-number: 16rem;
-    --fs-nav: 2rem;
+    --fs-nav: 1.5rem;
     --fs-body: 1.25rem;
   }
 }
@@ -367,7 +354,9 @@ h1 {
   }
 
   .header_nav a {
-    font-size: 2rem;
+    font-family: var(--font-subheader);
+    font-size: var(--fs-nav);
+    font-weight: 400;
   }
 
   h1 {
