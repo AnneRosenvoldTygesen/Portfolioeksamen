@@ -71,7 +71,7 @@
 }
 
 .kort.introtekst p {
-  max-width: 35ch;
+  max-width: 30ch;
   margin-inline: auto;
   font-size: 1.2rem;
 }
@@ -116,7 +116,9 @@
   color: var(--color-sort);
 }
 
-/**** DESKTOP **/
+/* ------------------------------------------------
+   1. SEKTION 2 - Responsivt (desktop)
+   ------------------------------------------------ */
 @media (min-width: 768px) {
   .forside_grid {
     display: grid;

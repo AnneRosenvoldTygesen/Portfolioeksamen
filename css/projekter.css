@@ -1,0 +1,205 @@
+/* ================================================
+   PORTFOLIOEKSAMEN — projekter.css
+   ------------------------------------------------
+   Indhold:
+   Sektion 1. Projekter grid
+   Sektion 2. Responsivt (desktop)
+   ================================================ */
+
+/* ------------------------------------------------
+   1. SEKTION 1 - Projekter grid
+   ------------------------------------------------ */
+
+/**** MOBILE FIRST *****/
+.projekter_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-inline: 40px;
+  margin-block: 75px;
+}
+
+.projekter_grid img {
+  max-width: 80%;
+  display: block;
+  margin-inline: auto;
+}
+
+.kort {
+  height: 500px;
+
+  padding-block: 50px;
+
+  display: grid;
+  place-content: center;
+  text-align: center;
+
+  gap: 2rem;
+}
+
+.kort h2 {
+  font-family: var(--font-header);
+  font-size: 3rem;
+  font-weight: 700;
+  -webkit-text-stroke: 1px var(--color-sort);
+  color: transparent;
+}
+
+.kort p {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 700;
+  line-height: 1.5;
+}
+.kort a {
+  font-family: var(--font-subheader);
+  font-size: var(--fs-h3);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/**bevægelsen ved hover effekt på forsiden **/
+.kort a:hover {
+  transform: scale(1.2);
+}
+
+.kort.projekt_introtekst {
+  background-color: var(--color-brun);
+  color: var(--color-sort);
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.kort.projekt_introtekst p {
+  max-width: 30ch;
+  margin-inline: auto;
+  font-size: 1.2rem;
+}
+
+/*** Hvert kort **/
+
+.kort.projekt_introtekst {
+  background-color: var(--color-lilla);
+  color: var(--color-sort);
+}
+
+.kort.projekt_web {
+  background-color: var(--color-gul);
+  color: var(--color-sort);
+}
+
+.kort.projekt_tomt1 {
+  background-color: var(--color-brun);
+  color: var(--color-sort);
+}
+
+.kort.projekt__tomt2 {
+  display: none;
+}
+
+.kort.projekt_uxui {
+  background-color: var(--color-offwhite);
+  color: var(--color-sort);
+}
+
+.kort.projekt__tomt3 {
+  background-color: var(--color-groen);
+}
+
+.kort.projekt_userinterface {
+  background-color: var(--color-lilla);
+  color: var(--color-sort);
+}
+
+.kort.projekt_tomt4 {
+  background-color: var(--color-blaa);
+}
+
+.kort.projekt_indhold {
+  background-color: var(--color-gul);
+  color: var(--color-sort);
+}
+
+/* ------------------------------------------------
+   1. SEKTION 2 - Responsivt (desktop)
+   ------------------------------------------------ */
+@media (min-width: 768px) {
+  .projekter_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    max-width: 1440px;
+    margin: 90px;
+
+    padding-inline: 30px;
+  }
+
+  .kort {
+    min-height: 350px;
+    height: auto;
+  }
+
+  .kort img {
+    max-width: 60%;
+    height: auto;
+  }
+
+  .kort h2 {
+    font-size: 4rem;
+  }
+
+  .kort a {
+    font-size: 2.5rem;
+  }
+
+  .kort.projekt_introtekst p {
+    max-width: 25ch;
+    margin-inline: auto;
+    font-size: 1.2rem;
+  }
+
+  /*** en tom kasse mere i desktop ***/
+  .kort.projekt_tomt1 {
+    background-color: var(--color-brun);
+    color: var(--color-sort);
+  }
+  .kort.projekt__tomt2 {
+    display: block;
+    background-color: var(--color-groen);
+  }
+
+  .kort.projekt__tomt3 {
+    background-color: var(--color-blaa);
+  }
+
+  .kort.projekt__tomt4 {
+    background-color: var(--color-blaa);
+  }
+
+  /** bytte rundt på kasserne fra mobile til desktop ***/
+  .kort.projekt_introtekst {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .kort.projekt_uxui {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .kort.projekt_userinterface {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .kort.projekt_tomt3 {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .kort.projekt_indhold {
+    grid-column: 3;
+    grid-row: 3;
+  }
+}
