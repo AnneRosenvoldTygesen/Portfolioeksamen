@@ -18,8 +18,22 @@
 }
 
 /**** styling af fullwidth top del **/
+/* 
 .fullwidth_02top {
-  min-height: 150px;
+  background-color: var(--color-gul);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.fullwidth_h2 {
+  margin: 0;
+  line-height: 1;
+}
+
+.fullwidth_h3 {
+  margin: 0.5rem 0 0;
+} */
+.fullwidth_02top {
   width: 100%;
   background-color: var(--color-gul);
   margin-block: 20px;
@@ -92,6 +106,7 @@
 /**** Løsnings afsnit ***/
 .web_loesning {
   text-align: center;
+
   margin-bottom: 60px;
 }
 
@@ -196,7 +211,6 @@
   /*** Overskrift **/
   .web_header {
     text-align: center;
-    margin-left: 10px;
     margin-top: 50px;
     margin-bottom: 50px;
   }
@@ -211,7 +225,7 @@
     max-width: 40ch;
     margin-inline: auto;
     text-align: left;
-    padding-top: 15%;
+    padding-top: 10%;
   }
 
   .fullwidth_grid_web {

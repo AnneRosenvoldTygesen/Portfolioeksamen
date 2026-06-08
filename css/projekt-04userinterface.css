@@ -1,0 +1,333 @@
+/* ================================================
+   PORTFOLIOEKSAMEN — Projekt 04 Userinterface.css
+   ------------------------------------------------
+   Indhold:
+   Sektion 1. Projekt 04 UI mobile opsætning
+   Sektion 2. Responsivt (desktop)
+   ================================================ */
+
+/* ------------------------------------------------
+   SEKTION 1 - Projekt 04 UI mobile opsætning
+   ------------------------------------------------ */
+
+/*** Overskrift **/
+.ui_header {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/**** styling af fullwidth top del **/
+.fullwidth_04top {
+  min-height: 180px;
+  width: 100%;
+  background-color: var(--color-gul);
+  margin-block: 20px;
+  text-align: center;
+}
+
+.fullwidth_h2 {
+  text-align: center;
+  font-family: var(--font-header);
+  font-size: 8.2rem;
+  font-weight: 700;
+  -webkit-text-stroke: 1px var(--color-sort);
+  color: transparent;
+  margin-bottom: 20px;
+}
+
+/**** styling af screen img og link ***/
+.section3_ui {
+  padding-top: 50px;
+  padding-bottom: 90px;
+}
+
+.device_mockup04 {
+  position: relative;
+  margin-inline: auto;
+}
+
+.desktop04 {
+  position: relative;
+  width: 70%;
+  max-width: 600px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.knap_wrapper {
+  text-align: center;
+}
+.knap {
+  font-family: var(--font-subheader);
+  font-size: var(--fs-nav);
+  font-weight: 400;
+  display: inline-block;
+
+  padding: 0.5rem 1.5rem;
+
+  background-color: var(--color-gul);
+  color: var(--color-sort);
+
+  border-radius: 25px;
+
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.knap:hover {
+  background-color: var(--color-gul);
+}
+
+/**** Løsnings afsnit ***/
+.ui_loesning {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.ui_loesning h3 {
+  font-size: 2.5rem;
+}
+
+.ui_loesning p {
+  max-width: 40ch;
+  margin-inline: auto;
+  margin-top: 20px;
+}
+
+/**** Fullwidth grid placering ****/
+.fullwidth_grid_ui {
+  background-color: var(--color-brun);
+  display: grid;
+  gap: 2rem;
+  padding-inline: 30px;
+  padding-block: 70px;
+  margin-bottom: 80px;
+}
+
+/**** Proces afsnit **/
+.ui_proces {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.ui_proces h3 {
+  font-size: 2.5rem;
+}
+
+.ui_proces p {
+  max-width: 40ch;
+  margin-inline: auto;
+  margin-top: 20px;
+}
+
+/**** Reflektion afsnit **/
+.ui_reflektion {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.ui_reflektion h3 {
+  font-size: 2.5rem;
+  margin-top: 60px;
+}
+
+.ui_reflektion p {
+  max-width: 40ch;
+  margin-inline: auto;
+  margin-top: 20px;
+}
+
+/*** Links til de andre projekter ***/
+
+.ui_links {
+  display: grid;
+  gap: 0.5rem;
+  justify-content: center;
+
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.ui_links a {
+  display: block;
+
+  padding: 0.5rem 1.5rem;
+
+  background-color: var(--color-gul);
+  color: var(--color-sort);
+
+  border-radius: 15px;
+
+  font-family: var(--font-subheader);
+  font-size: var(--fs-nav);
+  font-weight: 400;
+
+  text-align: center;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.3s ease;
+}
+
+.ui_links a:hover {
+  transform: translateY(-2px);
+}
+
+.ui_proces,
+.ui_reflektion {
+  justify-self: center;
+}
+
+/* ------------------------------------------------
+   SEKTION 2 - Responsivt (desktop)
+   ------------------------------------------------ */
+@media (min-width: 768px) {
+  /*** Overskrift **/
+
+  .ui_header {
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  /**** styling af fullwidth top del **/
+  .fullwidth_04top {
+    background-color: var(--color-gul);
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    /* margin-block: 20px; */
+  }
+
+  .fullwidth_h2 {
+    text-align: center;
+    font-family: var(--font-header);
+    font-size: 8.2rem;
+    font-weight: 700;
+    -webkit-text-stroke: 1px var(--color-sort);
+    color: transparent;
+    margin-bottom: 20px;
+  }
+
+  /** Grid på section 2 - link og løsning **/
+  .section_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .ui_loesning {
+    max-width: 40ch;
+    margin-inline: auto;
+    text-align: left;
+    padding-top: 10%;
+  }
+
+  /** collage grid ***/
+
+  .fullwidth_grid_ui {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 2fr; */
+    gap: 2rem;
+  }
+  .ui_krydsmetode {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .ui_brainstorm {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .ui_svggrafik {
+    width: 75%;
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 280px;
+    margin-left: 65px;
+  }
+
+  .ui_aifotos {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .ui_darkmode {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .ui_lightmode {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .ui_forms {
+    grid-column: 3;
+    grid-row: 3;
+  }
+
+  /**** Teskt sektion med Proces of reflektion **/
+  .section_text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+
+    max-width: 1300px;
+    margin-inline: auto;
+
+    align-items: start;
+  }
+
+  .section_text p {
+    max-width: 40ch;
+  }
+
+  .ui_proces,
+  .ui_reflektion {
+    max-width: 100ch;
+    margin-inline: auto;
+    text-align: left;
+    padding-top: 5%;
+  }
+
+  .ui_proces h3,
+  .ui_reflektion h3 {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  /*** styling af de 4 links i bunden **/
+
+  .ui_links {
+    grid-template-columns: repeat(2, max-content);
+    gap: 1rem 1.5rem;
+    /* margin-top: 60px; */
+    margin-bottom: 120px;
+  }
+
+  .ui_links a {
+    padding: 0.5rem 1.5rem;
+
+    background-color: var(--color-gul);
+    color: var(--color-sort);
+
+    border-radius: 30px;
+
+    font-family: var(--font-subheader);
+    font-size: var(--fs-nav);
+    font-weight: 400;
+
+    text-align: center;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+    transition: transform 0.3s ease;
+  }
+}
