@@ -1,1 +1,111 @@
+/* ================================================
+   PORTFOLIOEKSAMEN — forside.css
+   ------------------------------------------------
+   Indhold:
+   Sektion 1. Forside grid
+   Sektion 2. Responsivt (desktop)
+   ================================================ */
 
+/* ------------------------------------------------
+   1. SEKTION 1 - Forside grid
+   ------------------------------------------------ */
+
+/**** MOBILE FIRST *****/
+.forside_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-inline: 40px;
+  margin-top: 40px;
+}
+
+.kort {
+  height: 500px;
+
+  padding-block: 50px;
+
+  display: grid;
+  place-content: center;
+  text-align: center;
+
+  gap: 2rem;
+}
+
+.kort h2 {
+  font-family: var(--font-header);
+  font-size: 3rem;
+  font-weight: 700;
+  -webkit-text-stroke: 1px var(--color-sort);
+  color: transparent;
+}
+
+.kort p {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 700;
+  line-height: 1.5;
+}
+.kort a {
+  font-family: var(--font-subheader);
+  font-size: var(--fs-h3);
+  font-weight: 500;
+}
+.kort.introtekst {
+  background-color: var(--color-brun);
+  color: var(--color-sort);
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.kort.introtekst p {
+  max-width: 35ch;
+  margin-inline: auto;
+  font-size: 1.2rem;
+}
+
+.forside_grid img {
+  max-width: 80%;
+  display: block;
+  margin-inline: auto;
+}
+
+/*** Hvert kort **/
+.kort.web {
+  background-color: var(--color-gul);
+  color: var(--color-sort);
+}
+
+. .kort.ommig {
+  background-color: var(--color-lilla);
+  color: var(--color-sort);
+}
+
+.kort.projekter {
+  background-color: var(--color-groen);
+  color: var(--color-sort);
+}
+
+.kort.uxui {
+  background-color: var(--color-offwhite);
+  color: var(--color-sort);
+}
+
+.kort.kontakt {
+  background-color: var(--color-blaa);
+  color: var(--color-sort);
+}
+
+.kort.userinterface {
+  background-color: var(--color-lilla);
+  color: var(--color-sort);
+}
+
+.kort.tomt {
+  background-color: var(--color-blaa);
+}
+
+.kort.indhold {
+  background-color: var(--color-gul);
+  color: var(--color-sort);
+}

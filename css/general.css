@@ -125,6 +125,7 @@ h4 {
   font-size: var(--fs-h4);
   font-weight: 500;
 }
+
 /*** NUMMER TIL HVER OVERSKRIFT I PROJEKT **/
 
 .project-number {
@@ -277,7 +278,6 @@ h1 {
   color: var(--color-gul);
 }
 
-/* Aktiv side */
 .nav_prjkt.active {
   background-color: var(--color-gul);
   color: var(--color-sort);
@@ -380,5 +380,32 @@ h1 {
   .footer_tekst,
   .footer_følgmed {
     font-size: 1.5rem;
+  }
+}
+
+/***** SCROLL PIL NED ***/
+
+.scroll_hint {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 2rem;
+
+  transition: opacity 0.3s ease;
+  animation: bounce 1.5s infinite;
+
+  pointer-events: none;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(10px);
   }
 }
