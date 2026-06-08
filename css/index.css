@@ -15,7 +15,7 @@
   display: grid;
   grid-template-columns: 1fr;
   margin-inline: 40px;
-  margin-top: 40px;
+  margin-block: 75px;
 }
 
 .kort {
@@ -76,7 +76,7 @@
   color: var(--color-sort);
 }
 
-. .kort.ommig {
+.kort.ommig {
   background-color: var(--color-lilla);
   color: var(--color-sort);
 }
@@ -108,4 +108,41 @@
 .kort.indhold {
   background-color: var(--color-gul);
   color: var(--color-sort);
+}
+
+/**** DESKTOP **/
+@media (min-width: 768px) {
+  .forside_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    max-width: 1440px;
+    margin: 90px;
+
+    padding-inline: 30px;
+  }
+
+  .kort {
+    min-height: 350px;
+    height: auto;
+  }
+
+  .kort img {
+    max-width: 60%;
+    height: auto;
+  }
+
+  .kort h2 {
+    font-size: 4rem;
+  }
+
+  .kort a {
+    font-size: 2.5rem;
+  }
+
+  /** bytte rundt på 'velkommen til' og web ***/
+  .kort.introtekst {
+    grid-column: 2;
+    grid-row: 1;
+  }
 }
