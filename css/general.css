@@ -49,12 +49,12 @@
   :root {
     --fs-h1: 16rem;
     --fs-h2: 5rem;
-    --fs-h3: 4rem;
+    --fs-h3: 3.5rem;
     --fs-h4: 3.5rem;
 
     --fs-project-number: 16rem;
     --fs-nav: 1.5rem;
-    --fs-body: 1.25rem;
+    --fs-body: 1rem;
   }
 }
 
@@ -373,7 +373,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
+    gap: 3rem;
   }
 
   .dot {
@@ -428,5 +428,97 @@ h1 {
 
   50% {
     transform: translateX(-50%) translateY(10px);
+  }
+}
+
+/*** styling til at kunne trykke billeder store **/
+.lightbox {
+  display: none;
+
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.9);
+
+  z-index: 9999;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90vh;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+
+  color: white;
+  font-size: 3rem;
+
+  cursor: pointer;
+}
+
+.gallery-img {
+  cursor: pointer;
+}
+
+.gallery-img {
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.2);
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); */
+}
+
+/* --------------------------------
+   Generel hover effekt på knapper
+-------------------------------- */
+
+.knap,
+.indhold_links a,
+.kontakt_form button {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.web_links a:hover,
+.uxui_links a:hover,
+.ui_links a:hover,
+.indhold_links a:hover,
+.knap:hover,
+.indhold_links a:hover,
+.kontakt_form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  animation: wiggle 0.4s ease;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-2deg);
+  }
+
+  50% {
+    transform: rotate(2deg);
+  }
+
+  75% {
+    transform: rotate(-1deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
   }
 }

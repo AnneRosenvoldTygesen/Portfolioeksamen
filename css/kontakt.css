@@ -16,13 +16,13 @@
 }
 
 /*** Fullwidth section ***/
-.fullwidth_kontakt {
+.kontakt_info {
   width: 100%;
   background-color: var(--color-gul);
   margin-block: 20px;
 }
 
-.fullwidth_kontakt p {
+.kontakt_info p {
   max-width: 40ch;
   margin-inline: auto;
   text-align: left;
@@ -39,7 +39,7 @@
 }
 
 .some_ikoner img {
-  width: 60px;
+  width: 50px;
 }
 
 /*** Styling af kontakt formular **/
@@ -80,7 +80,7 @@
 
   background-color: var(--color-offwhite);
 
-  padding: 1rem;
+  padding: 0.8rem;
 
   font-family: var(--font-body);
   font-size: 1rem;
@@ -119,4 +119,76 @@
 
 .kontakt_form textarea {
   margin-top: 40px;
+}
+
+/* ------------------------------------------------
+   SEKTION 2 - Responsivt (desktop)
+   /* ------------------------------------------------ */
+@media (min-width: 768px) {
+  .kontakt_info {
+    margin: 0;
+  }
+  /* Hele kontaktsektionen */
+  .kontakt_wrapper {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    align-items: stretch;
+    margin-bottom: 60px;
+  }
+
+  /* Venstre kolonne */
+  .kontakt_info {
+    background-color: var(--color-gul);
+    padding: 2rem;
+    margin: 0;
+  }
+
+  .kontakt_info p {
+    max-width: 35ch;
+    padding-top: 55px;
+  }
+  .some_ikoner {
+    justify-content: center;
+    /* margin-top: 15px; */
+  }
+
+  /* Højre kolonne */
+  .kontakt_formular {
+    /* background-color: var(--color-brun); */
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 1.5rem;
+  }
+
+  .kontakt_formular h3 {
+    font-size: 2.5rem;
+    padding-top: 0;
+    margin-bottom: 20px;
+  }
+
+  /* Formular */
+  .kontakt_form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    /* align-items: start;
+    margin-top: 3rem; */
+  }
+
+  .kontakt_form textarea {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+
+    min-height: 200px;
+    margin-top: 0;
+  }
+
+  .kontakt_form button {
+    grid-column: 2;
+    justify-self: center;
+    /* align-self: start; */
+    margin-top: 0.5rem;
+    /* margin-bottom: 0; */
+  }
 }

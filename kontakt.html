@@ -89,41 +89,52 @@
 
         <h2 class="web_header">Kontakt</h2>
 
-        <section>
-            <div class="fullwidth_kontakt">
+        <div class="kontakt_wrapper">
+            <section class="kontakt_info">
 
-                <p>Synes du om mit visuelle univers og min stil, er du altid velkommen til at kontakte mig. Sammen kan
-                    vi tage en uforpligtende snak om dine idéer, behov og muligheder. <br> <br> <br>Fang mig her eller
+
+                <p>Synes du om mit visuelle univers og min stil, er du altid velkommen til at kontakte mig omkring et
+                    evt. samarbejde. Sammen
+                    kan
+                    vi tage en uforpligtende snak om dine idéer, behov og muligheder. <br> <br> <br>Fang mig her
+                    eller
                     på de
                     sociale medier.</p>
                 <div class="some_ikoner">
                     <img src="img/header_footer/linkedin_icon.webp" alt="linkedin">
                     <img src="img/header_footer/instagram_icon.webp" alt="instagram">
                 </div>
+            </section>
 
-            </div>
+            <section class="kontakt_formular">
 
-        </section>
+                <h3>Kontakt formular:</h3>
 
-        <section class="kontakt_formular">
 
-            <h3>Kontakt formular:</h3>
+                <form class="kontakt_form" action="https://api.web3forms.com/submit" method="POST">
 
-            <form class="kontakt_form">
+                    <input type="hidden" name="access_key" value="b565abed-7317-4c8c-8a8d-efd1afc4511f">
+                    <input type="hidden" name="redirect" value="DIN_FÆRDIGE_URL/Tak.html">
 
-                <input type="text" placeholder="Navn">
+                    <input type="hidden" name="subject" value="Ny henvendelse fra portfolio">
 
-                <input type="tel" placeholder="Telefon">
+                    <input type="text" name="name" placeholder="Navn *" autocomplete="name" required>
 
-                <input type="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Telefon *" autocomplete="tel" required>
 
-                <textarea placeholder="Besked"></textarea>
+                    <input type="email" name="email" placeholder="Email *" autocomplete="email" required>
 
-                <button type="submit">Send ↙</button>
+                    <textarea name="message" placeholder="Besked *" required></textarea>
 
-            </form>
+                    <button type="submit">Send ↙</button>
 
-        </section>
+
+                </form>
+
+            </section>
+
+        </div>
+
 
     </main>
 

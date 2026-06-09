@@ -105,6 +105,15 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  .tekst_erfaring,
+  .tekst_kompetencer {
+    max-width: none;
+    margin-inline: 0;
+  }
+
+  .tekst_erfaring h3 {
+    white-space: nowrap;
+  }
   /*** placering af img IT kompetencer **/
   .it_kompetencer {
     width: 500px;

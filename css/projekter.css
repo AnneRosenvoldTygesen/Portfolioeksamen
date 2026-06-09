@@ -47,7 +47,19 @@
 }
 
 .kort a {
-  transition: all 0.3s ease;
+  display: inline-block;
+  justify-self: center;
+
+  padding: 0.5rem 1.5rem;
+
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 999px;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 /**bevægelsen ved hover effekt på forsiden **/
@@ -149,7 +161,7 @@
   }
 
   .kort a {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .kort.projekt_introtekst p {

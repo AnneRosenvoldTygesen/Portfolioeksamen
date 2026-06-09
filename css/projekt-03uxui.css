@@ -29,11 +29,12 @@
 .fullwidth_h2 {
   text-align: center;
   font-family: var(--font-header);
-  font-size: 8.2rem;
+  font-size: 6.5rem;
   font-weight: 700;
   -webkit-text-stroke: 1px var(--color-sort);
   color: transparent;
   margin-bottom: 20px;
+  padding-top: 20px;
 }
 
 /**** styling af screen img og link ***/
