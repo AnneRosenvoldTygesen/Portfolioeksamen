@@ -37,23 +37,11 @@
 }
 
 .kort h2 {
-  font-family: var(--font-header);
-  font-size: 3rem;
-  font-weight: 700;
   -webkit-text-stroke: 1px var(--color-sort);
   color: transparent;
 }
 
-.kort p {
-  font-family: var(--font-body);
-  font-size: var(--fs-body);
-  font-weight: 700;
-  line-height: 1.5;
-}
 .kort a {
-  font-family: var(--font-subheader);
-  font-size: var(--fs-h3);
-  font-weight: 500;
   transition: all 0.3s ease;
 }
 /**bevægelsen ved hover effekt på forsiden **/
@@ -145,7 +133,7 @@
   }
 
   .kort a {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   /** bytte rundt på 'velkommen til' og web ***/

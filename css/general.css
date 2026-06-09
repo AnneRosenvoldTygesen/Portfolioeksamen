@@ -113,6 +113,12 @@ h4 {
   font-weight: 500;
 }
 
+a {
+  font-family: var(--font-subheader);
+  font-size: var(--fs-nav);
+  font-weight: 500;
+}
+
 /*** NUMMER TIL HVER OVERSKRIFT I PROJEKT **/
 .project-number {
   font-family: var(--font-header);

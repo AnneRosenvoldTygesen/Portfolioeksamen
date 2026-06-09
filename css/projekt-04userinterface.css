@@ -14,7 +14,7 @@
 .ui_header {
   text-align: center;
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 /**** styling af fullwidth top del **/
@@ -83,18 +83,16 @@
 
 /**** Løsnings afsnit ***/
 .ui_loesning {
-  text-align: center;
-  margin-bottom: 60px;
+  max-width: 40ch;
+  margin-inline: auto;
 }
 
 .ui_loesning h3 {
-  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 .ui_loesning p {
-  max-width: 40ch;
-  margin-inline: auto;
-  margin-top: 20px;
+  margin-bottom: 60px;
 }
 
 /**** Fullwidth grid placering ****/
@@ -109,35 +107,30 @@
 
 /**** Proces afsnit **/
 .ui_proces {
-  text-align: center;
-  margin-bottom: 60px;
+  max-width: 40ch;
+  margin-inline: auto;
 }
 
 .ui_proces h3 {
-  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 .ui_proces p {
-  max-width: 40ch;
-  margin-inline: auto;
-  margin-top: 20px;
+  margin-bottom: 60px;
 }
 
 /**** Reflektion afsnit **/
 .ui_reflektion {
-  text-align: center;
-  margin-bottom: 60px;
+  max-width: 40ch;
+  margin-inline: auto;
 }
 
 .ui_reflektion h3 {
-  font-size: 2.5rem;
-  margin-top: 60px;
+  margin-bottom: 20px;
 }
 
 .ui_reflektion p {
-  max-width: 40ch;
-  margin-inline: auto;
-  margin-top: 20px;
+  margin-bottom: 60px;
 }
 
 /*** Links til de andre projekter ***/

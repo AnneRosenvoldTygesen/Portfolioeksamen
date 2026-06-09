@@ -14,7 +14,7 @@
 .uxui_header {
   text-align: center;
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 /**** styling af fullwidth top del **/
@@ -84,6 +84,8 @@
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
 
   transition: all 0.3s ease;
+
+  margin-top: 30px;
 }
 
 .knap:hover {
@@ -92,20 +94,17 @@
 
 /**** Løsnings afsnit ***/
 .uxui_loesning {
-  text-align: center;
-  margin-bottom: 60px;
+  max-width: 40ch;
+  margin-inline: auto;
 }
 
 .uxui_loesning h3 {
-  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 .uxui_loesning p {
-  max-width: 40ch;
-  margin-inline: auto;
-  margin-top: 20px;
+  margin-bottom: 60px;
 }
-
 /**** Fullwidth grid placering ****/
 .fullwidth_grid_uxui {
   background-color: var(--color-brun);
@@ -118,35 +117,30 @@
 
 /**** Proces afsnit **/
 .uxui_proces {
-  text-align: center;
-  margin-bottom: 60px;
+  max-width: 40ch;
+  margin-inline: auto;
 }
 
 .uxui_proces h3 {
-  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 .uxui_proces p {
-  max-width: 40ch;
-  margin-inline: auto;
-  margin-top: 20px;
+  margin-bottom: 60px;
 }
 
 /**** Reflektion afsnit **/
 .uxui_reflektion {
-  text-align: center;
-  margin-bottom: 60px;
+  max-width: 40ch;
+  margin-inline: auto;
 }
 
 .uxui_reflektion h3 {
-  font-size: 2.5rem;
-  margin-top: 60px;
+  margin-bottom: 20px;
 }
 
 .uxui_reflektion p {
-  max-width: 40ch;
-  margin-inline: auto;
-  margin-top: 20px;
+  margin-bottom: 60px;
 }
 
 /*** Links til de andre projekter ***/

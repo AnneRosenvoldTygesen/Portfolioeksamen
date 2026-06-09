@@ -11,11 +11,16 @@
    ------------------------------------------------ */
 
 /**** MOBILE FIRST *****/
+.web_header {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .projekter_grid {
   display: grid;
   grid-template-columns: 1fr;
   margin-inline: 40px;
-  margin-block: 75px;
 }
 
 .projekter_grid img {
@@ -37,23 +42,11 @@
 }
 
 .kort h2 {
-  font-family: var(--font-header);
-  font-size: 3rem;
-  font-weight: 700;
   -webkit-text-stroke: 1px var(--color-sort);
   color: transparent;
 }
 
-.kort p {
-  font-family: var(--font-body);
-  font-size: var(--fs-body);
-  font-weight: 700;
-  line-height: 1.5;
-}
 .kort a {
-  font-family: var(--font-subheader);
-  font-size: var(--fs-h3);
-  font-weight: 500;
   transition: all 0.3s ease;
 }
 
@@ -125,12 +118,18 @@
    1. SEKTION 2 - Responsivt (desktop)
    ------------------------------------------------ */
 @media (min-width: 768px) {
+  .web_header {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
   .projekter_grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
     max-width: 1440px;
-    margin: 90px;
+    /* margin: 90px; */
 
     padding-inline: 30px;
   }
